@@ -10,3 +10,14 @@
 # increment_volume (this will increase the tv's volume by 1)
 # decrement_volume (this will decrease the tv's volume by 1)
 # set_channel (this will change the tv's channel to whatever integer is passed to this method)
+
+
+
+class TV 
+  attr_accessor :power, :volume, :channel 
+
+  def initialize(power, volume, channel)
+    @power = 
+    @volume = 
+    @channel = 
+  end 

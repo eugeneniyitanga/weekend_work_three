@@ -3,6 +3,13 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
+  new_base_word = base_word.split("")
+  new_mutation = mutation.split("")
+  if new_mutation.all?{|letters|new_base_word.include?(letters)}
+  return true 
+  else 
+  false 
+  end 
 
 end
 
