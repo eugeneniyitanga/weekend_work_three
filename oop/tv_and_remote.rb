@@ -25,22 +25,22 @@ class Remote
   end 
 
   def toggle_power(power)
-  if power == "ON"
+  if @power == "ON"
   puts "OFF"
   else 
   puts "ON"   
   end 
 
-  def increment_volume 
-   
+  def increment_volume(volume)
+  @volume + 1   
   end 
 
-  def decrement_volume 
-
+  def decrement_volume
+  @volume - 1 
   end 
 
-  def set_channel 
-
+  def set_channel(number)
+  @number 
   end 
 
 
@@ -52,3 +52,5 @@ class TV < Remote
     @volume = tv_function [:volume]
     @channel = tv_function [:channel]
   end 
+
+  
