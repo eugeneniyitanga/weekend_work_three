@@ -13,11 +13,42 @@
 
 
 
-class TV 
+class Remote
+
+  attr_accessor :tv 
+
+  def initialize(remote_function)
+    @toggle_power = remote_function [:toggle_power]
+    @increment_volume = remote_function [:increment_volume]
+    @decrement_volume = remote_fucntion [:decrement_volume]
+    @set_channel = remote_function [:set_channel]
+  end 
+
+  def toggle_power(power)
+  if power == "ON"
+  puts "OFF"
+  else 
+  puts "ON"   
+  end 
+
+  def increment_volume 
+   
+  end 
+
+  def decrement_volume 
+
+  end 
+
+  def set_channel 
+
+  end 
+
+
+class TV < Remote  
   attr_accessor :power, :volume, :channel 
 
-  def initialize(power, volume, channel)
-    @power = 
-    @volume = 
-    @channel = 
+  def initialize(tv_function)
+    @power = tv_function [:power]
+    @volume = tv_function [:volume]
+    @channel = tv_function [:channel]
   end 
